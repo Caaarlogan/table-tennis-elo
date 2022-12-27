@@ -1,7 +1,7 @@
 from src.elopy import *
 import streamlit as st
 
-def calculate(df):
+def calculate(df, player_list):
   """
   Calculate the elo ratings of matches listed on an Excel spreadsheet starting from top to bottom.
   The first row should be a header with labels for date, player 1, player 1 score, player 2, and player 2 score, in that order.
@@ -9,7 +9,7 @@ def calculate(df):
     file: location of the Excel file as a string
   """
 
-  i = Implementation()
+  i = Implementation(player_list)
 
   total_rows = len(df)
 

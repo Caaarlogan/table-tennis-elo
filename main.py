@@ -36,7 +36,7 @@ players_df = pd.DataFrame(players).sort_values(by=['Name'])
 player_name_list = players_df['Name'].to_list()
 
 st.button('Refresh')
-i = calculate(history_df)
+i = calculate(history_df, player_name_list)
 ranking_tab, add_tab = st.tabs(['Rankings & Records', 'Add Records & Players'])
 player_list = i.getPlayerList()
 

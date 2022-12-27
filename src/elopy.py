@@ -9,13 +9,14 @@ class Implementation:
     A class that represents an implementation of the Elo Rating System
     """
 
-    def __init__(self, base_rating=1000):
+    def __init__(self, player_list=[], base_rating=1000):
         """
         Runs at initialization of class object.
         @param base_rating - The rating a new player would have
         """
         self.base_rating = base_rating
         self.players = []
+        self.player_list = player_list
 
     def getPlayerList(self):
         """
@@ -82,7 +83,7 @@ class Implementation:
         expected1 = player1.compareRating(player2)
         expected2 = player2.compareRating(player1)
         
-        k = len(self.getPlayerList()) * 42
+        k = len(self.player_list) * 42
 
         rating1 = player1.rating
         rating2 = player2.rating
