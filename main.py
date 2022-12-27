@@ -28,7 +28,7 @@ db = firestore.Client.from_service_account_info(firestore_key)
 history_ref = db.collection('history')
 history = [history_doc.to_dict() for history_doc in history_ref.stream()]
 history_df = pd.DataFrame(history)
-history_df = history_df[['Timestamp', 'Player 1', 'Score 1', 'Player 2', 'Score 2']]
+history_df = history_df[['Player 1', 'Score 1', 'Player 2', 'Score 2', 'Timestamp']]
 
 if len(history_df) > 0:
   timezone = environ['TIMEZONE']
