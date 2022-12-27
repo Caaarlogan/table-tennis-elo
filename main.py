@@ -92,7 +92,7 @@ with add_tab:
       else:
         timeNow = time.time()*1000
         history_ref.add({"Timestamp":timeNow, "Player 1":player1, "Score 1":score1, "Player 2":player2, "Score 2":score2})
-        st.info('Record Added')
+        st.info('Record Added, Refresh to see changes')
 
   st.title('Add Player')
 
@@ -107,5 +107,6 @@ with add_tab:
         st.error('Player name already taken')
       else:
         players_ref.add({"Name":player})
+        st.info('Player Added, Refresh to see changes')
 
 
