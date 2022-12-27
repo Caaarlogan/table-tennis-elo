@@ -1,0 +1,6 @@
+openpyxl==3.0.10
+streamlit==1.16.0
+protobuf==4.21.12
+Jinja2==3.1.2
+python-dotenv==0.21.0
+google-cloud-firestore==2.7.3

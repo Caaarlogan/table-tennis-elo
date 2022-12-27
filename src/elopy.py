@@ -17,7 +17,7 @@ class Implementation:
         self.base_rating = base_rating
         self.players = []
 
-    def __getPlayerList(self):
+    def getPlayerList(self):
         """
         Returns this implementation's player list.
         @return - the list of all player objects in the implementation.
@@ -67,7 +67,7 @@ class Implementation:
         Adds a new player to the implementation.
         @param name - The name to identify a specific player.
         """
-        self.__getPlayerList().remove(self.getPlayer(name))
+        self.getPlayerList().remove(self.getPlayer(name))
 
 
     def recordMatch(self, name1, name2, winner=None, draw=False):
@@ -82,7 +82,7 @@ class Implementation:
         expected1 = player1.compareRating(player2)
         expected2 = player2.compareRating(player1)
         
-        k = len(self.__getPlayerList()) * 42
+        k = len(self.getPlayerList()) * 42
 
         rating1 = player1.rating
         rating2 = player2.rating
@@ -128,7 +128,7 @@ class Implementation:
         @return - the list of tuples
         """
         lst = []
-        for player in self.__getPlayerList():
+        for player in self.getPlayerList():
             lst.append((player.name,player.rating))
         return lst
 
