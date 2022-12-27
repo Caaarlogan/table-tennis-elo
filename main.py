@@ -13,11 +13,19 @@ load_dotenv()
 # STREAMLIT CONFIG
 #################################################################################################
 hide_menu_style = """
-        <style>
-        #MainMenu {visibility: hidden;}
-        </style>
-        """
+                  <style>
+                  #MainMenu {visibility: hidden;}
+                  </style>
+                  """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
+
+hide_footer_style = """
+                    <style>
+                    #MainMenu {visibility: hidden;}
+                    footer {visibility: hidden;}
+                    </style>
+                    """
+st.markdown(hide_footer_style, unsafe_allow_html=True)
 
 #################################################################################################
 # GET DATA
